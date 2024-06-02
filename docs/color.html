@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个测试！！！！！</title>
+    <style>
+        .rainbow-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>会变化的字体</h1>
+    <h2 id="current-time"></h2>
+    <p id="rainbow-text-one" class="rainbow-text">哈哈哈哈哈哈哈哈哈</p>
+    <p id="rainbow-text-two" class="rainbow-text">俊杰哥哥，我又写好啦</p>
+    <p id="rainbow-text-three" class="rainbow-text">五彩斑斓，巨好玩</p>
+
+    <script>
+        // 获取当前时间并更新页面
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("current-time").textContent = "当前时间：" + timeString;
+
+            // 更新彩色文字的颜色
+            var hue = seconds * 6; // 每秒改变颜色
+            var color = "hsl(" + hue + ", 100%, 50%)"; // 使用HSL颜色模式
+            document.getElementById("rainbow-text-one").style.color = color;
+            document.getElementById("rainbow-text-two").style.color = color;
+            document.getElementById("rainbow-text-three").style.color = color;
+
+            // 更新页面背景色
+            var randomColor = getRandomColor();
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // 生成随机颜色
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // 每秒钟更新一次时间
+        setInterval(updateTime, 1000);
+
+        // 页面加载时立即更新时间
+        updateTime();
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个测试！！！！！</title>
+    <style>
+        .rainbow-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>会变化的字体</h1>
+    <h2 id="current-time"></h2>
+    <p id="rainbow-text-one" class="rainbow-text">哈哈哈哈哈哈哈哈哈</p>
+    <p id="rainbow-text-two" class="rainbow-text">俊杰哥哥，我又写好啦</p>
+    <p id="rainbow-text-three" class="rainbow-text">五彩斑斓，巨好玩</p>
+
+    <script>
+        // 获取当前时间并更新页面
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("current-time").textContent = "当前时间：" + timeString;
+
+            // 更新彩色文字的颜色
+            var hue = seconds * 6; // 每秒改变颜色
+            var color = "hsl(" + hue + ", 100%, 50%)"; // 使用HSL颜色模式
+            document.getElementById("rainbow-text-one").style.color = color;
+            document.getElementById("rainbow-text-two").style.color = color;
+            document.getElementById("rainbow-text-three").style.color = color;
+
+            // 更新页面背景色
+            var randomColor = getRandomColor();
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // 生成随机颜色
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // 每秒钟更新一次时间
+        setInterval(updateTime, 1000);
+
+        // 页面加载时立即更新时间
+        updateTime();
+    </script>
+</body>
+</html>
